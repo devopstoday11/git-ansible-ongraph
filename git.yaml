@@ -1,0 +1,22 @@
+---
+- name: Cloning Git Repository
+  gather_facts: no
+  hosts: localhost
+  tasks:
+      - name: Cloning Git Repository of creating user
+        git:
+            repo: "https://github.com/i-adarsh/create-user.git"
+            dest: roles/create-user
+            clone: yes
+  
+      - name: Cloning Git Repository of string encryption
+        git:
+            repo: "https://github.com/i-adarsh/string-encrypt.git"
+            dest: roles/string-encrypt
+
+      - name: Cloning Git Repository for creating vault
+        git:
+            repo: "https://github.com/i-adarsh/create-vault.git"
+            dest: roles/create-vault
+
+...
